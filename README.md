@@ -12,6 +12,9 @@ faster. In the workshop you'll learn first hand how applying Clean
 Code and Design Principles will help you complete solid & maintainable
 applications in less time.
 
+#Labs
+(labs.md)[labs.md]
+
 #ABSTRACT
 We are often asked for more features, more bugfixes, faster. But is
 "running" always the fastest way to get things done?
