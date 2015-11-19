@@ -64,5 +64,5 @@ gulp.task('default', function () {
 
   startExpress();
   startLivereload();
-  gulp.watch('*.md', notifyLivereload);
+  gulp.watch(['*.md','*.html' ], notifyLivereload);
 });
