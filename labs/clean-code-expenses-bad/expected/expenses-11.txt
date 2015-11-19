@@ -1,0 +1,5 @@
+Month January
+
+Expenses: 4
+
+Total: 33

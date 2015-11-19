@@ -1,0 +1,9 @@
+Month January
+
+Expenses: 4
+
+Food: 10
+Taxi: 15
+Train: 16
+
+Total: 33
