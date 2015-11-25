@@ -170,11 +170,11 @@ Clean Code, Design Principles and Lean to the rescue
 * Ignaz Semmelweis
   * http://www.npr.org/sections/health-shots/2015/01/12/375663920/the-doctor-who-championed-hand-washing-and-saved-women-s-lives
   * http://semmelweis.org/about/dr-semmelweis-biography/
-  
+
 * He championed washing hands before childbirth and surgery
-  
+
     
-  
+
 ## The simples things are the most difficult to do
 * he was obstracized by the medical community!
   * it can't be that simple...
@@ -271,8 +271,8 @@ Most code is written once, but read
 * to add new features
 * by other developers
   * including your future self 
-  
-  
+
+
 
 ##what is a good name?
 * Ideas?
@@ -288,7 +288,7 @@ Most code is written once, but read
  * does the right thing
  * intent
  * domain abstraction
- 
+
 http://llewellynfalco.blogspot.it/p/infographics.html
 
 
@@ -352,7 +352,7 @@ Lab 2: refactor the first example
 * Mental energy is finite
   * attention over time
   * amount of information: 7 +/- 2
- 
+
 * do not waste it in useless mappings
   * see http://www.amazon.it/Badass-Making-Awesome-Kathy-Sierra/dp/1491919019
 
@@ -393,9 +393,9 @@ http://plnkr.co/edit/mZtyDG?p=info
 * the IDE does most of that for you
 * share a team guideline
   * possibly, a shared style template 
-  
-  
-  
+
+
+
 ## Making code diff-friendly 
 * diffs work mainly line by line
 * each line should have a different reason / time to change
@@ -752,7 +752,7 @@ Incremental transformation
 
 * separate adding features from refactoring
   * don't do both in the same step
- 
+
 
 
 ## IDE Refactoring tools
@@ -779,7 +779,7 @@ The power of compounding many small changes _in the same direction_
 * simple refactorings are performed at the AST level in the IDE
   * renaming
   * extracting method
-  
+
 
 
 ##Lab
@@ -789,7 +789,7 @@ The power of compounding many small changes _in the same direction_
 * extract sub-methods
 * create classes
 * extract interfaces
- 
+
 
 
 ##The principles
@@ -834,8 +834,8 @@ Four quadrants:
 * This does not mean that you do not have a vision
 * Plan the overall Path
   * but execute a step at a time
-  
-  
+
+
 
 ##Lab
 Define the main structure
@@ -969,7 +969,7 @@ Learning
   * e.g. jrebel
   * gulp serve
   * livereload
-  
+
 
 
 ## Model based, system thinking
