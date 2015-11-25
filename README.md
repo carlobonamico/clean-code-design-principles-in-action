@@ -12,8 +12,11 @@ faster. In the workshop you'll learn first hand how applying Clean
 Code and Design Principles will help you complete solid & maintainable
 applications in less time.
 
+#Slides
+* [CleanCodeInAction-Slides-6.pdf](CleanCodeInAction-Slides-6.pdf)
+
 #Labs
-[labs.md](labs.md)
+* [labs.md](labs.md)
 
 #ABSTRACT
 We are often asked for more features, more bugfixes, faster. But is
