@@ -11,8 +11,8 @@ or plain "Download Zip" from browser
 
 
 
-# Clean Code and Design Principles in Action: 
-## develop quality applications, faster
+### Clean Code and Design Principles in Action: 
+### develop quality applications, faster
 As developers, we often feel that we are always asked for more: more
 features, more bugfixes, more code to get our application done,
 faster. In the workshop you'll learn first hand how applying Clean

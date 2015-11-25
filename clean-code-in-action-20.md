@@ -3,7 +3,7 @@
   * https://cleancoders.com
 
 * Full lab from my Codemotion Workshop
-* https://github.com/carlobonamico/clean-code-design-principles-in-action
+  * https://github.com/carlobonamico/clean-code-design-principles-in-action
 
 
 
@@ -12,7 +12,7 @@
   * http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf
   
 - More on TDD
-  * 
+  * http://matteo.vaccari.name/blog/tdd-resources
 
 - Modern Agile
   * https://www.industriallogic.com/blog/modern-agile/
@@ -24,7 +24,7 @@
 
 ##Javascript
 * http://humanjavascript.com/
-* http://javascript.crockford.com/
+* http://javascript.crockford.com/ 
 * http://yuiblog.com/crockford/
 
 * Free javascript books
@@ -37,9 +37,6 @@
   * https://github.com/carlobonamico/
 
 * My presentations
-  * https://github.com/carlobonamico/mobile-html5-websites-and-hybrid-apps-with-angularjs
-  * https://github.com/carlobonamico/angularjs-future-web-development-slides
-
   * http://slideshare.net/carlo.bonamico
 
 * Follow me at [@carlobonamico](https://twitter.com/carlobonamico) / [@nis_srl](https://twitter.com/nis_srl)
@@ -54,8 +51,3 @@
 
 
 
-##
-
-
-
-##

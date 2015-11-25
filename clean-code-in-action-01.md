@@ -37,7 +37,7 @@ Write an expense report tool that
 ## Specifications
 ### Input
 
-```
+```csv
 10/01/2015, 10.50
 11/01/2015, 8.50
 12/01/2015, 5.50
@@ -70,7 +70,7 @@ not good but not so bad
 - add a type of expense
 - skip an header row
 
-```
+```csv
 Date, Type, Amount
 10/01/2015, Train, 10.50
 ```
@@ -84,7 +84,7 @@ Date, Type, Amount
 ## The results
 another 15 minutes - I am a 10x-programmer!
 
-xxx Lines, and already unmaintainable
+120 Lines, and already unmaintainable
 
 [labs/clean-code-expenses-ugly](labs/clean-code-expenses-ugly)
 
@@ -98,9 +98,7 @@ xxx Lines, and already unmaintainable
 
 
 ## what happens after 6 months?
-The original developer has left the company. 
-
-Your boss asks you: 
+The original developer has left the company and your boss asks you: 
 
 >Can you simply automatically do this for all employees?
 > and fix the case where the input file is incorrect
@@ -135,10 +133,6 @@ the "deadly sins" of development
 Lab
 
 * write down 3 problems with the expense report code
-
-
-#If you remember just one thing...
-* What you get with angular: write less code, reuse more the code you write!
 
 
 
@@ -187,7 +181,7 @@ Clean Code, Design Principles and Lean to the rescue
   * we just don't have time...
 
 * And now?
-  
+
 
 
 ## Clean Code
@@ -232,10 +226,6 @@ It takes a Deliberate approach and constant effort
 
 ##Practice and Katas
 Code Katas
-
-
-#Learn more
-* https://docs.angularjs.org/guide
 
 
 
@@ -364,6 +354,7 @@ Lab 2: refactor the first example
   * amount of information: 7 +/- 2
  
 * do not waste it in useless mappings
+  * see http://www.amazon.it/Badass-Making-Awesome-Kathy-Sierra/dp/1491919019
 
 
 
@@ -376,10 +367,6 @@ And
 * commit log messages
   * a message to your future self (and team mates)
   ``` git commit -m "bug fix" ```
-
-
-##More practice and Katas
-* 
 
 
 
@@ -413,7 +400,9 @@ http://plnkr.co/edit/mZtyDG?p=info
 * diffs work mainly line by line
 * each line should have a different reason / time to change
 
-Html example
+
+
+##Html example
 
 ```html
    <div>Threshold <input type="number" style="color : red" min ="5"
@@ -444,18 +433,6 @@ vs
 Refactor this
 
 * http://plnkr.co/edit/91t0kv?p=preview
-
-
-## If you only remember 1 thing
-
-
-##More practice and Katas
-* 
-
-
-
-#Learn more
-* https://docs.angularjs.org/guide
 
 
 
@@ -504,8 +481,9 @@ If your function needs to perform a non-trivial task:
 * import data, transform it and store it in the DB
 
 Instead of 
-```
+```js
   readData(){
+    file.open();
     while(..)
       {
         line = readLine();
@@ -527,6 +505,9 @@ what's better?
    }  
 ```
 
+* a function for each step
+* a function to call the steps
+
 
 
 ## Primitives, Orchestrators, level of abstraction
@@ -545,18 +526,6 @@ what's better?
 * Parse the Meteo Data file and compute the weekly min and max temperature
 
 
-## If you only remember 1 thing
-
-
-##More practice and Katas
-* 
-
-
-
-#Learn more
-* https://docs.angularjs.org/guide
-
-
 
 ##Concept 4 - What's in a good class? Design Principles
 - Single Responsibility Principle
@@ -566,7 +535,18 @@ what's better?
 - interfaces and the importante of Contracts
 
 
-##Code ?!#%
+
+##Single Responsibility Principle
+Have you ever seen your grandmother put dirty clothes in the fridge?
+
+Or biscuits in the vegetable box?
+
+So, why to we do this all the time in our code? 
+
+
+
+##Single Responsibility Principle
+Responsibility == reason to change
 
 
 
@@ -578,6 +558,13 @@ Consequences:
 * classes should be small
 * classes should be focused
 * classes need to collaborate to perform complex tasks
+
+
+
+##LAB
+* Take the "ugly" code or any other code example
+* Paste it in word / Google Docs
+* Outline in different colors the various responsibilities
 
 
 
@@ -627,17 +614,6 @@ Consequences:
 * integrate with the acccounting application
 
 
-## If you only remember 1 thing
-
-
-##More practice and Katas
-* 
-
-
-#Learn more
-* https://docs.angularjs.org/guide
-
-
 
 ##Concept 5 - Making our code Testable
 - avoid statics
@@ -667,11 +643,6 @@ Things that make code well-designed, easy to evolve
 * decoupled
 * composition
 
-
-##Lab
-
-
-## If you only remember 1 thing
 
 
 ##More practice and Katas
@@ -736,8 +707,11 @@ Also modern debuggers are able to display the value inline
 * http://plnkr.co/edit/WoP0Ry?p=preview
 
 
+
 ##Logging
-TODO
+* make log messages understandable 
+  * avoid mental mapping
+* make them easy to search
 
 
 
@@ -751,14 +725,6 @@ Your code should read like a terse prose of _simple_ statements
 * this also helps with debugging!
 
 
-##More practice and Katas
-* 
-
-
-#Learn more
-* https://docs.angularjs.org/guide
-
-
 
 ##Concept 7 - Refactoring
 - from bad code to good code
@@ -769,6 +735,7 @@ Your code should read like a terse prose of _simple_ statements
 
 
 ##Code ?!#%
+* Go back to the "ugly" example
 
 
 
@@ -824,17 +791,6 @@ The power of compounding many small changes _in the same direction_
 * extract interfaces
  
 
-## If you only remember 1 thing
-
-
-##More practice and Katas
-* 
-
-
-#Learn more
-* https://docs.angularjs.org/guide
-
-
 
 ##The principles
 So what did we just do? Understand the principles
@@ -887,17 +843,11 @@ Split in sub-tastks with post-its
 Discuss the optimal order
 Introduce mock / support steps
 
-## If you only remember 1 thing
-
 
 
 ##More practice and Katas
 * Elefant Carpaccio
   * https://docs.google.com/document/u/1/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub
-
-
-#Learn more
-* https://docs.angularjs.org/guide
 
 
 
@@ -908,9 +858,6 @@ Introduce mock / support steps
 Skeleton approach
 - how to keep track of what you do and what is missing
 - how to manage incremental commits
-
-
-##Code ?!#%
 
 
 
@@ -966,21 +913,6 @@ Define the main structure
 Split in sub-tastks with post-its
 Discuss the optimal order
 Introduce mock / support steps
-
-
-## If you only remember 1 thing
-
-
-#If you remember just one thing...
-* What you get with angular: write less code, reuse more the code you write!
-
-
-##More practice and Katas
-* 
-
-
-#Learn more
-* https://docs.angularjs.org/guide
 
 
 
@@ -1054,17 +986,6 @@ Or at least do it fast
 
 
 
-##Lab
-
-
-## If you only remember 1 thing
-
-
-#If you remember just one thing...
-* What you get with angular: write less code, reuse more the code you write!
-
-
-
 ##More practice and Katas
 * http://codekata.com/
 
@@ -1074,12 +995,10 @@ Or at least do it fast
 * https://codeascraft.com/2012/05/22/blameless-postmortems/
 
 
+
 ## Learning to learn
 * Kathy Sierra
 * https://www.youtube.com/watch?v=FKTxC9pl-WM
-
-#Learn more
-* https://docs.angularjs.org/guide
 
 
 
