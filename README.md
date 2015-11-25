@@ -18,6 +18,10 @@ applications in less time.
 #Labs
 * [labs.md](labs.md)
 
+#References
+* [team.md](team.md)
+* [clean-code-in-action-20.md](clean-code-in-action-20.md)
+
 #ABSTRACT
 We are often asked for more features, more bugfixes, faster. But is
 "running" always the fastest way to get things done?
