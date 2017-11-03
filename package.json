@@ -9,8 +9,14 @@
   "author": "Carlo Bonamico",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "connect-livereload": "~0.5.0",
-    "tiny-lr": "~0.1.4",
-    "express": "~4.10.2"
+    "connect-livereload": "~0.6.0",
+    "tiny-lr": "~1.0.5",
+    "express": "~4.16.2"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "reveal.js": "^3.5.0",
+    "systemjs": "^0.20.19",
+    "typescript": "^2.6.1"
   }
 }
