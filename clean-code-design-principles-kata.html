@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Clean Code & Design Principles Kata - Codemotion Milano 2017</title>
+
+	<meta name="description" content="Clean Code in Action">
+	<meta name="author" content="Carlo Bonamico">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
+	
+	<link rel="stylesheet" href="xreveal/lib/css/zenburn.css">
+
+	<style>
+		footer {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 100px;
+			width: 100%;
+		}
+	</style>
+		
+	<link rel="stylesheet" href="css/github.css">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h3>Codemotion Workshop</h3>
+				<h1>Clean Code - Design Principles Kata</h1>
+				<ximg src="clean-code.png" height="150" width="auto" />
+				<h3>Develop high quality applications, faster</h3>
+				<p>
+					<small><a href="http://www.nispro.it">CARLO BONAMICO</a> / carlo.bonamico@gmail.com / <a href="http://twitter.com/carlobonamico">@carlobonamico</a></small>
+				</p>
+				<p>
+					<small><a href="http://www.nispro.it">DANILO CARUSO</a> </small>
+				</p>
+			</section>
+
+			<section>
+				<h3 class="panel-title">Module 00</h3>
+
+				<p> Introduction
+				</p>
+			</section>
+
+			<section data-markdown="kata/clean-code-design-principles-kata.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>
+
+			<section>
+
+				<h3 class="panel-title">Module </h3>
+
+				<p>
+					References
+
+				</p>
+			</section>
+			<section data-markdown="clean-code-in-action-20.md" data-separator="^\n\n\n" data-vertical="^\n\n" data-notes="^Note:" data-charset="iso-8859-15"></section>
+
+
+
+			<section>
+				<h1>Thank you for your attention</h1>
+				<br/>
+				<h3>Carlo Bonamico</h3>
+				<h4>@carlobonamico </h4>
+				<h4>carlo.bonamico@gmail.com</h4>
+				<br/>
+				<br/>
+				<h4>http://milano.codemotionworld.com</h4>
+				<h4>http://training.codemotion.it/</h4>
+
+			</section>
+		</div>
+
+
+
+		<footer>
+			<!--<div style="bottom: 50px; "><img src="css/theme/nis.png" height="100px" witdth="auto" /> <span style="float:right; margin-right: 120px; "><small> http://www.nispro.it - 15/01/2014</small> </span> </div>
+				-->
+			<div style="bottom: 50px; "><img src="css/theme/codemotion.jpg" height="100px" witdth="auto" /> <span style="float:right; margin-right: 120px; "><small> http://training.codemotion.it 2017</small> </span>				</div>
+		</footer>
+	</div>
+
+
+	<script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+	<script src="node_modules/reveal.js/js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+					
+	</script>
+
+</body>
+
+</html>

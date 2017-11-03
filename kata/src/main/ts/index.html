@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SystemJS</title>
+  <script src="../../../../node_modules/systemjs/dist/system.js"></script>
+  <script src="../../../../node_modules/typescript/lib/typescript.js"></script>
+  <script>
+    System.config({
+      transpiler: 'typescript'
+    });
+    System
+      .import('main.ts')
+      .then(null, console.error.bind(console));
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- http://david-barreto.com/how-to-use-typescript-with-systemjs/ -->
