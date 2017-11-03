@@ -5,7 +5,7 @@ Materials and samples for my workshops on Clean Code and Design Principles
 https://milan2017.codemotionworld.com/workshop/clean-code-design-principles-kata/
  
 # Slides
-* [kata/clean-code-design-principles-kata.md]
+* [kata/clean-code-design-principles-kata.md](kata/clean-code-design-principles-kata.md)
 * [kata/CleanCodeDesignPrinciplesKata-Slides-6.pdf](CleanCodeDesignPrinciplesKata-6.pdf)
 
 
