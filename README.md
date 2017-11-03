@@ -1,4 +1,4 @@
-# clean-code-design-principles-in-action
+# Codemotion 2017: clean-code-design-principles-kata
 
 Materials and samples for my workshops on Clean Code and Design Principles
 
@@ -11,7 +11,7 @@ https://milan2017.codemotionworld.com/workshop/clean-code-design-principles-kata
 
 
 
-# Clean Code and Design Principles in Action: develop quality applications, faster
+# Codemotion 2015: Clean Code and Design Principles in Action: develop quality applications, faster
 * http://milan2015.codemotionworld.com/workshop/clean-code-and-design-principles-in-action-develop-quality-applications-faster/
 
 # In Short
