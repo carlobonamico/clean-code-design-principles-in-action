@@ -6,3 +6,6 @@ bin
 kata/.settings/org.eclipse.m2e.core.prefs
 kata/.settings/org.eclipse.jdt.core.prefs
 kata/.classpath
+.settings
+temp
+.project
