@@ -1,0 +1,38 @@
+[
+    {
+        "category": "food",
+        "limitOver": "expense",
+        "maximumAmount": 20,
+        "isBlocking": "false"
+    },
+    {
+        "category": "food",
+        "limitOver": "day",
+        "maximumAmount": 50,
+        "isBlocking": "false"
+    },
+    {
+        "category": "hotels",
+        "limitOver": "expense",
+        "maximumAmount": 100,
+        "isBlocking": "false"
+    },
+    {
+        "category": "travel",
+        "limitOver": "expense",
+        "maximumAmount": 200,
+        "isBlocking": "false"
+    },
+    {
+        "category": "*",
+        "limitOver": "expense",
+        "requireDocument": true,
+        "isBlocking": "true"
+    },
+    {
+        "category": "all",
+        "limitOver": "month",
+        "maximumAmount": 1000,
+        "isBlocking": "true"
+    }
+]

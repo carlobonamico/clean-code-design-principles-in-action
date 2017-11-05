@@ -1,0 +1,107 @@
+{
+    "employee": {
+        "firstName" : "Carlo",
+        "lastName": "Bonamico",
+        "id": 2224,
+        "role": "Software Developer"
+    },
+    "month": "March",
+    "year": 2017, 
+    "submittedOn": "2017-04-01T18:25:43.511Z",
+    "status": "PENDING_APPROVAL",
+    "expenses": [
+        {
+            "id": 1,
+            "category": "food",
+            "amount": 11.5,
+            "hasDocument": true,
+            "day": "2017-03-10T18:25:43.511Z"
+        },
+        {
+            "id": 2,
+            "category": "food",
+            "amount": 1.5,
+            "hasDocument": false,
+            "day": "2017-03-10T18:25:43.511Z"
+        },
+        {
+            "id": 3,
+            "category": "food",
+            "amount": 5,
+            "hasDocument": true,
+            "day": "2017-03-11T18:25:43.511Z"
+        },
+        {
+            "id": 4,
+            "category": "train",
+            "amount": 21.50,
+            "hasDocument": true,
+            "day": "2017-03-11T11:25:43.511Z"
+        },
+        {
+            "id": 5,
+            "category": "hotel",
+            "amount": 125,
+            "hasDocument": true,
+            "day": "2017-03-12T12:25:43.511Z"
+        },
+        {
+            "id": 6,
+            "category": "food",
+            "amount": 13,
+            "hasDocument": true,
+            "day": "2017-03-12T:25:43.511Z"
+        },
+        {
+            "id": 7,
+            "category": "train",
+            "amount": 30.5,
+            "hasDocument": false,
+            "day": "2017-03-13T13:25:43.511Z"
+        },
+        {
+            "id": 8,
+            "category": "food",
+            "amount": 31.5,
+            "hasDocument": true,
+            "day": "2017-03-20T18:25:43.511Z"
+        },
+        {
+            "id": 9,
+            "category": "taxi",
+            "amount": 10.5,
+            "hasDocument": true,
+            "day": "2017-03-20T18:25:43.511Z"
+        },
+        {
+            "id": 10,
+            "category": "hotel",
+            "amount": 50,
+            "hasDocument": true,
+            "day": "2017-03-21T18:25:43.511Z"
+        },
+        {
+            "id": 11,
+            "category": "food",
+            "amount": 31.5,
+            "hasDocument": true,
+            "day": "2017-03-22T18:25:43.511Z"
+        },
+        {
+            "id": 12,
+            "category": "taxi",
+            "amount": 30.5,
+            "hasDocument": false,
+            "day": "2017-03-23T18:25:43.511Z"
+        },
+        {
+            "id": 13,
+            "category": "hotel",
+            "amount": 150,
+            "hasDocument": true,
+            "day": "2017-04-21T18:25:43.511Z"
+        }
+
+
+    ]  
+}
