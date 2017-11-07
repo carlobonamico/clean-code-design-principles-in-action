@@ -16,7 +16,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "reveal.js": "^3.5.0",
-    "systemjs": "^0.20.19",
+    "systemjs": "^0.19.39",
     "typescript": "^2.6.1"
   }
 }
