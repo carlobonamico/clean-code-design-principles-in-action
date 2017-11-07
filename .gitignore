@@ -9,3 +9,5 @@ kata/.classpath
 .settings
 temp
 .project
+kata/obj
+
