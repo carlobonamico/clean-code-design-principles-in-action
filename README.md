@@ -1,5 +1,5 @@
 # Codemotion 2017: clean-code-design-principles-kata
-
+# ---
 Materials and samples for my workshops on Clean Code and Design Principles
 
 https://milan2017.codemotionworld.com/workshop/clean-code-design-principles-kata/
