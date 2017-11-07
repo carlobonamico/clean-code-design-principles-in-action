@@ -23,7 +23,7 @@ class ExpenseRequestParser {
         File file = new File("input/request.json");
         
         try {
-            ExpenseRequest request = mapper.readValue(file, ExpenseRequest.class);
+            ExpensesRequest request = mapper.readValue(file, ExpensesRequest.class);
             System.out.println(request);
             System.out.println(mapper.writeValueAsString(request));
             

@@ -3,7 +3,7 @@ package com.carlobonamico.cleancode.kata;
 import java.util.ArrayList;
 import java.util.List;
 
-class ExpenseRequest {
+class ExpensesRequest {
     private List<Expense> expenses = new ArrayList<Expense>(); 
     private String month; 
     private int year; 
