@@ -1,23 +1,13 @@
-import JsonFileReader from './JsonFileReader.ts';
+import JsonFileReader from './JsonFileReader';
+import ExpensesRequest from './ExpensesRequest';
 
-class Expense {
-    
-    amount: Number; 
-    category: string; 
-    day: Date; 
-
-    hasDocument: boolean; 
-}
-
-class ExpensesRequest {
-    expenses: Array<Expense> = [];
-}
 
 class Test {
     test(){
         let reader = new JsonFileReader(); 
-        let expensesRequest = reader.load("../input/request.json") as ExpensesRequest; 
-        alert("works");
+        let expensesRequest = reader.load("../../../input/request.json") as ExpensesRequest; 
+        console.log("Loaded");
+        console.log(JSON.stringify(expensesRequest));
     }
 }
 
