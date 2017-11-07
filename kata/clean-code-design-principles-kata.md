@@ -160,6 +160,9 @@ We need to better design the software
 * This does not mean that you do not have a vision
 * Plan the overall Path
   * but execute a step at a time
+  * take decisions __at the last responsible moment__
+  * minimize unneeded complexity
+  * maximize available information
 
 * Rebecca Parsons' Book
   * https://martinfowler.com/articles/evo-arch-forward.html
