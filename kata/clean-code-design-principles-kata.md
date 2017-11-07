@@ -52,7 +52,7 @@ Basically, to all developers! Independently from the language / platform you are
 # TOPICS 
 * Single Responsibility Principle for methods
 * Single Responsibility Principle for Classes
-* Single Responsibility means splitting …
+* Single Responsibility means splitting ...
 * How to start?
 
 
@@ -94,14 +94,6 @@ Basically, to all developers! Independently from the language / platform you are
 
 
 
-# What is Software Design? 
-
-
-
-# Ideas...
-TODO: 
-
-
 ## What often happens
 * huge files
 * deep interconnections between features
@@ -110,13 +102,24 @@ TODO:
 * risk of change increases
 * productivity decreases over time
 
+We need to better design the software
+
+
+
+# What is Software Design? 
+
+
+
+# Ideas...
+* defining structure
+* ... 
+
 
 
 # what is a "good" Design?
 
 
 
-# Spaghetti code vs encapsulated
 <img src="images/codemotion/6.png" >
 
 
@@ -148,6 +151,7 @@ TODO:
 # Design is very important even in Agile
 
 ## It is just done at different times
+* https://martinfowler.com/articles/designDead.html
 
 
 
@@ -156,10 +160,10 @@ TODO:
 * This does not mean that you do not have a vision
 * Plan the overall Path
   * but execute a step at a time
-TODO: more
 
-
-* Rebecca Parsons book https://files.thoughtworks.com/pdfs/Books/Building+evolutionary+architecture.pdf
+* Rebecca Parsons' Book
+  * https://martinfowler.com/articles/evo-arch-forward.html
+  * https://files.thoughtworks.com/pdfs/Books/Building+evolutionary+architecture.pdf
 
 
 
@@ -167,6 +171,9 @@ TODO: more
 * discovery from tests
 * discovery from requirements
 * making the invisible visibile
+* continuous refactoring
+
+<img src ="http://1.bp.blogspot.com/-Aaw2GppgxeA/Ve-a1CMqJEI/AAAAAAAAD8w/Epy6-J7VdGY/s320/PracticalRefactoringDemo.gif" >
 
 
 
@@ -208,9 +215,12 @@ Think of a building
 > Software development is a learning process
 >
 > Working code is a side effect
+
 Alberto Brandolini 
 
-Learning to learn
+
+
+# Learning to learn
 * Kathy Sierra
 * https://www.youtube.com/watch?v=FKTxC9pl-WM
 
@@ -224,6 +234,10 @@ Learning to learn
 * Users / Domain Experts and Developers
 * Developers / Team members 
 * Future Developers / Maintainers
+
+
+
+# Design is a communication tool
 
 
 
@@ -241,7 +255,7 @@ If you oversimplify Essential Complexity, you get
 * higher coupling
 * worse defect rate / maintainability 
 
-* can be however reduced through 
+Can be however reduced through 
   * Abstraction
   * Composition
   * Changing the Context Boundary
@@ -307,7 +321,7 @@ Key ideas:
 * agree on a single definition / word per concept
 * always use it in
   * code
-  * ocuments
+  * documents
   * tests
 
 
@@ -333,11 +347,6 @@ Key ideas:
   * attention over time
   * amount of information: 7 +/- 2
 
-* do not waste it in useless mappings
-  * see http://www.amazon.it/Badass-Making-Awesome-Kathy-Sierra/dp/1491919019
-FIXME: here or before? 
-
-
 
 
 # Keep the model consistent and up to date
@@ -353,7 +362,6 @@ FIXME: here or before?
 
 A great way to kickstart the Domain Model discovery
 https://www.slideshare.net/ziobrando/50000-orange-stickies-later
-TODO: more ???
 
 
 
@@ -370,13 +378,15 @@ The Travel Expenses Kata
 
 
 # What is a Kata? 
+* Learn by repeating a known track
+* but __trying to make it better__ every time
+
   * _deliberate practice_ -> iterate small skills until >90% perfect
-TODO: 
 
 
 
 # Our Kata
-TODO: Approach
+Approach
 * focus on the business logic
   * limited UI (only a TXT report)
 * see how new requirements impact our design
@@ -419,15 +429,15 @@ Blocking Errors
 ```
 
 
+
 # Approach
 * Do everything incrementally
 * start from the basics
 
 
 
-# LAB
-Model storming
-* define on paper the main entities
+# LAB 1- Model storming
+* define on paper the main Domain Components
   * input data (e.g. Request... )
   * output data (e.g. Report.. )
   * processing steps/policies
@@ -435,7 +445,9 @@ Model storming
 * define their relationships
 * define main operations
 
-focus on the application domain
+__focus on the application domain__
+
+pay attention to the __Ubiquitous Language__
 
 
 
@@ -446,12 +458,12 @@ focus on the application domain
 
 
 
-# LAB - Identify an implementation roadmap
+# LAB 2 - Identify an implementation roadmap
+In 5-10 minutes
 * how can we split the design and implementation in 
   * phases
   * sub-tasks
 
-* vertical vs horizontal slicing
 
 
 
@@ -460,7 +472,7 @@ It's difficult!
 
 The general vision is needed, but we must implement it incrementally
 
-* make it smaller
+> make it smaller!
 
 
 
@@ -469,6 +481,8 @@ The general vision is needed, but we must implement it incrementally
 * A & B -> A then B
 
 * top down vs bottom up
+
+http://agileforall.com/resources/how-to-split-a-user-story/
 
 
 
@@ -480,8 +494,7 @@ The general vision is needed, but we must implement it incrementally
 
 
 
-# LAB
-* what is the "Minimum Viable Implementation"?
+# LAB 3 - find the "Minimum Viable Implementation"
 
 * choose a single case to process, from end to the end
   * End-to-end means Request loading to Report output
@@ -511,8 +524,16 @@ The general vision is needed, but we must implement it incrementally
 * also, in-app mocking
 
 
+## How to keep track of what you do and what's missing
+* Write it down
+* comment it with temporary comments
+* code it!
 
-# LAB: outline an implementation plan
+
+
+
+
+# LAB 4 - outline an implementation plan
 Define the main structure
 Split in sub-tastks with post-its
 Discuss the optimal order
@@ -544,10 +565,30 @@ Introduce mock / support steps
 
 
 
-# Advanced
+# Advanced Features
 - Implement limit per day (Optional)
 
 - implement daily limit per Category  (Optional)
+
+
+
+## Incremental commits
+* Each commit should start from a stable state and lead to a stable but more complete state
+
+
+
+## Link: continuous delivery
+http://continuousdelivery.com/
+
+
+
+##More practice and Katas
+* Elefant Carpaccio
+  * https://docs.google.com/document/u/1/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub
+
+
+
+
 
 
 
@@ -584,7 +625,7 @@ Things which
 * change at the same time
 need to stay together (or at least nearby)
 
-Think forks and knives
+Think __forks and knives__
 
 
 
@@ -597,7 +638,7 @@ Thinks that
 * change at DIFFERENT times
 need to stay separate
 
-Think forks and milk, or bread and socks
+Think __forks and milk__, or __bread and socks__
 
 
 
@@ -607,67 +648,13 @@ Think forks and milk, or bread and socks
 
 
 
-## Do you know this man? 
-Google Ignaz Semmelweis
-
-
-
-## It is _not_ brain surgery 
-* Ignaz Semmelweis
-  * http://www.npr.org/sections/health-shots/2015/01/12/375663920/the-doctor-who-championed-hand-washing-and-saved-women-s-lives
-  * http://semmelweis.org/about/dr-semmelweis-biography/
-
-* He championed washing hands before childbirth and surgery
-
-    
-
-## The simples things are the most difficult to do
-* he was obstracized by the medical community!
-  * it can't be that simple...
-  * we just don't have time...
-
-* And now?
-
-
-
-
-## Clean Code and Basic Design Principles
-* cannot solve all development problems...
-
-* But can make them way more tractable!
-
-
-especially if applied consistently.
-> Never underestimate the impact of doing something all the time 
-
-
-
-## The Boy Scout Rule
->Leave the campsite a little better than you found it
-
->Every time you touch some code, leave it a little better
-
-The power of compounding many small changes _in the same direction_
-* 1% time
-
-
-
 # A "bad" example
 How does our code become unmanageable? A practical example
 - fast-forward demo through the life of an (apparently) trivial function
 
 
 
-## The requirements
-Write an expense report tool that
-- runs in a folder where employee expense excel (csv for now) are stored
-- a file for each month (e.g. 01.csv for January)
-
-
-
-## Specifications
-### Input
-
+## Parsing Expenses from CSV
 ```csv
 10/01/2015, 10.50
 11/01/2015, 8.50
@@ -677,56 +664,15 @@ Write an expense report tool that
 
 
 
-### Expected output
-- compute the monthly total and produce <<month>>-report.txt
-
-```
-Month January
-
-Expenses: 4
-Amount: 33
-```
-
-
-
-## Convert coffee to code...
-Version 1... 
-implemented in 15 minutes! :-) 
-
-not good but not so bad
-
-
-
-# Can you also...
-- add a type of expense
-- skip an header row
-
-```csv
-Date, Type, Amount
-10/01/2015, Train, 10.50
-```
-
-- produce an html report
-- compute expenses per category
-- detect if the expenses are more than threshold
-
-
-
 ## The results
-another 15 minutes - I am a 10x-programmer!
-
 120 Lines, and already unmaintainable
 
 [labs/clean-code-expenses-ugly](labs/clean-code-expenses-ugly)
 
 
 
-# Impact of change analysis
-TODO: more
-
-
-
 ## the effects: 
+* simple changes impact most of the codebase
 * code-writing time -> decreases
 * application-ready time -> never done
 * time needed for bug fixes and new features -> increases
@@ -751,8 +697,8 @@ Clean Code, Design Principles and Lean to the rescue
 
 
 
-# LAB
-Implement the first steps paying attention to Cohesion and Coupling
+# LAB 5 - Implement the first steps 
+paying attention to Cohesion and Coupling
 
 - Parsing Json -> Minimal (always ok) Validation -> Generate Report
   - generate empty Report
@@ -777,6 +723,41 @@ And name them well
 
 
 
+## Do you know this man? 
+Google Ignaz Semmelweis
+
+
+
+## It is _not_ brain surgery 
+* Ignaz Semmelweis
+  * http://www.npr.org/sections/health-shots/2015/01/12/375663920/the-doctor-who-championed-hand-washing-and-saved-women-s-lives
+  * http://semmelweis.org/about/dr-semmelweis-biography/
+
+* He championed washing hands before childbirth and surgery
+
+   
+
+## Clean Code and Basic Design Principles
+* cannot solve all development problems...
+
+* But can make them way more tractable!
+
+
+especially if applied consistently.
+
+> Never underestimate the impact of doing something all the time 
+
+The power of compounding many small changes _in the same direction_
+
+
+
+## The Boy Scout Rule
+>Leave the campsite a little better than you found it
+
+>Every time you touch some code, leave it a little better
+
+
+
 # Single Responsibility Principle for methods
 
 
@@ -787,11 +768,6 @@ Single Responsibility Principle for methods
 * Primitives vs orchestrators
 * if you have to do 3 things, make 4 functions
 * Steps vs Flow
-
-
-
-##Code ?!#%
-See the ``gen()`` function again
 
 
 
@@ -813,12 +789,6 @@ Ask yourself questions...
 * Where?
 
 And put the answer in different sub-functions
-
-
-
-## Inputs vs outputs
-* make inputs clear
-* limit / avoid output parameters
 
 
 
@@ -856,13 +826,14 @@ what's better?
 
 
 
-# LAB review the validate() and generate() functions
-Split the methods in elementary responsibilities
+# LAB 6 - review your methods
+* Particularly the validate() and generate() functions
+* Split the methods in elementary responsibilities
 
 
 
 # Synchronization point
-At this point you should have separate methods for 
+At this point you should have at least separate methods for 
 - validating a single expense
 - generating the header
 - generating the validated expenses table
@@ -889,7 +860,7 @@ At this point you should have separate methods for
 
 
 
-##Lab - add more validations
+##Lab 7 - add more validations
 - Validate documentation present of the first expenses
   - status in expense line
 - add warnings at the bottom (Optional)
@@ -904,7 +875,7 @@ At this point you should have separate methods for
 Single Responsibility Principle for Classes
 What is a Responsibility
 * reason to change
-* what if…
+* what if ...
 * looks similar vs changes for the same reason
 
 
@@ -934,17 +905,18 @@ Consequences:
 
 
 
-##LAB FIXME: 
-* Take the "ugly" code or any other code example
+##LAB 8 - color the responsibilities
+* Take the biggest class written up to now or any other code example
 * Paste it in word / Google Docs
 * Outline in different colors the various responsibilities
 
 
 
-
-# LAB: Validating the overall monthly total amount
+# LAB 9 - Validate all individual amounts
 - Validate amount limit on single expense 
 - iterate validations on all expenses
+
+Question: where do we take the limit from? 
 
 
 
@@ -962,7 +934,7 @@ At this point you should have separate classes for
 
 
 # looks similar vs changes for the same reason
-TODO: link
+https://web.archive.org/web/20090411030053/http://threeriversinstitute.org/blog?p=104
 
 
 
@@ -978,25 +950,6 @@ TODO: link
 * Intent from implementation
 
 
-# UI from logic
-
-
-
-# Logic from persistence
-
-
-
-# I/O from logic
-
-
-
-# Sync from Async
-
-
-
-# Intent from implementation 
-
-
 
 # Layered Architecture
 * each layer depends only on lower layers
@@ -1004,39 +957,6 @@ TODO: link
 
 
 
-# LAB: planning a complex change: adding aggregation
-Compute amount total and allowed amount total (introduce aggregation)
-
-* Define the main structure
-* Split in sub-tastks with post-its
-* Discuss the optimal order
-
-
-
-## How to keep track of what you do and what's missing
-* Write it down
-* comment it with temporary comments
-* code it!
-
-
-
-## Incremental commits
-* Each commit should start from a stable state and lead to a stable but more complete state
-
-
-
-## Link: continuous delivery
-http://continuousdelivery.com/
-
-
-
-##More practice and Katas
-* Elefant Carpaccio
-  * https://docs.google.com/document/u/1/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub
-
-
-
-#FIXME: anticipare?
 # TOPICS 
 Reviewing your Design
 * naming
@@ -1056,24 +976,6 @@ Reviewing your Design
 
 
 
-## Why does this matter? 
-A little experiment
-
-Write down: 
-- what the software does
-- how long it took to understand it
-- which bugs you can find in the code
-- how long it took to find them
-
-
-
-## Ready - Set - Go!
-Group A: go to http://plnkr.co/edit/dQldXF
-
-Group B: go to http://plnkr.co/edit/zPXf70?
-
-
-
 ##reading code vs writing code
 >What is written without effort is in general read without pleasure.
 >
@@ -1084,11 +986,6 @@ Most code is written once, but read
 * to add new features
 * by other developers
   * including your future self 
-
-
-
-##what is a good name?
-* Ideas?
 
 
 
@@ -1105,13 +1002,10 @@ Most code is written once, but read
 http://llewellynfalco.blogspot.it/p/infographics.html
 
 
-# Model out Loud
 
-
-# Examples
-
-
-# What if this changes? 
+# LAB 10 - review your design
+* check naming
+* check if you can make implicit concepts visible
 
 
 
@@ -1140,6 +1034,10 @@ TODO:
 
 
 
+# LAB: separate class initialization and wiring
+
+
+
 ## Inheritance - with caution
 * Inheritance is the strongest link between classes
 * useful with caution
@@ -1155,8 +1053,13 @@ Achieve complex interaction by coordinating simple elements
 
 
 # LAB: Monthly Expense limits 
+Compute amount total and allowed amount total (introduce aggregation)
 - implement monthly overall limit 
 - delegating aggregation to dedicated class
+
+* Define the main structure
+* Split in sub-tastks with post-its
+* Discuss the optimal order
 
 
 
@@ -1182,7 +1085,7 @@ chaos if same approach applied in the large
   * outputs
 * Define a list of individual validators
 * separate the validators from their application to the expenses
-TODO: review
+
 
 
 
@@ -1192,8 +1095,7 @@ TODO: review
 
 
 # LAB: Validating Monthly constraints per category
-TODO: add other validation 
-
+- implement limit per category
 - Implement limit per day (Optional)
 
 
@@ -1212,7 +1114,7 @@ TODO: add other validation
 
 
 
-# TOPICS 
+# What we have learned 
 Generalizing the model
 * making the implicit explicit
 * Levels of abstraction vs Levels of implementation
@@ -1233,60 +1135,6 @@ Introduce the concept of Validation Rule
 
 
 
-# Emergent concepts TODO: ???
-* DDD Concepts like aggregates, etc.
-
-
-
-
-# TOPICS 
-Incremental development and Evolutionary Design
-* the need for a continuous chain of small, safe steps of design &
-* how to do everything incrementally
-* incremental implementation: in-application Mocks & the Walking Skeleton approach
-* the Expand and Contract pattern
-
-
-
-# Refactoring for evolutionary design
-- from bad code to good code
-- in steps
-- learn your IDE refactoring tools
-- The "Boy Scout Rule"
-- Why we need unit tests?
-
-
-
-## From bad to good
-Incremental transformation
-
-<img src ="http://1.bp.blogspot.com/-Aaw2GppgxeA/Ve-a1CMqJEI/AAAAAAAAD8w/Epy6-J7VdGY/s320/PracticalRefactoringDemo.gif" >
-
-
-
-## In steps
-* Each step should not change the functional properties of the system
-* and improve the non-functional ones
-
-* separate adding features from refactoring
-  * don't do both in the same step
-
-
-
-## IDE Refactoring tools
-* if you have to pick one: Find all references
-* Refactor / Rename
-* Extract Method
-* Extract Interface
-* http://refactoring.com/
-
-
-
-# LAB
-TODO: 
-
-
-
 ## How to do everything incrementally
 * You can do _everything_ incrementally
   * decouple release from deployment
@@ -1300,7 +1148,11 @@ TODO:
 
 
 # Expand-Contract
-TODO: 
+Refactor from A to B
+* First do A
+* then do A + part of B
+* then do B
+* then remove A  
 
 
 
@@ -1393,10 +1245,14 @@ http://itrevolution.com/books/phoenix-project-devops-book/
 Drive (sulla motivazione)
 https://books.google.it/books?id=E0H_DIkg0I4C
 
-Event Storming
+
+
+# Event Storming
 http://www.slideshare.net/ziobrando/event-storming-recipes
 https://www.youtube.com/watch?v=veTVAN0oEkQ 
 http://www.slideshare.net/ziobrando/idea-stickies-green-bar-wroclaw-edition
 
-Introduzione di nuovi approcci nei team
+
+
+# Introduzione di nuovi approcci nei team
 http://www.davidmarquet.com/
