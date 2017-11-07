@@ -357,6 +357,200 @@ TODO: more ???
 
 
 
+# The Travel Expenses Kata
+
+
+
+# TOPICS 
+The Travel Expenses Kata
+* what is a Kata?
+* overview of the Kata
+* basic requirements
+
+
+
+# What is a Kata? 
+  * _deliberate practice_ -> iterate small skills until >90% perfect
+TODO: 
+
+
+
+# Our Kata
+TODO: Approach
+* focus on the business logic
+  * limited UI (only a TXT report)
+* see how new requirements impact our design
+
+
+
+# General Requirements
+Design on paper the macro-structure of an Expense Report Validator Use Case
+  * load a single Request from JSON 
+  * (in a second phase, also load the Validation Rules)
+  * validate one or more conditions (e.g. amount limits)
+  * present a TXT or HTML report showing validation results
+
+With the goal of letting the user take a decision and change the status of the request
+
+
+
+# Have a look at the inputs...
+
+
+
+## Sample Validation Report
+```
+Employee: Carlo Bonamico
+Month: March
+Year: 2017
+
+Expenses: 3
+
+Date      Category  Requested Amount  Status  Allowed Amount  
+10 March  food                  10.5  NODOC   0            
+10 March  food                  35.7  PARTIAL 25
+10 March  taxi                  10.2  OK      10.2  
+...
+March     TOTAL                 66.4          35.2
+Warnings
+- expenses with no document
+Blocking Errors
+- overall total > 200 euro
+```
+
+
+# Approach
+* Do everything incrementally
+* start from the basics
+
+
+
+# LAB
+Model storming
+* define on paper the main entities
+  * input data (e.g. Request... )
+  * output data (e.g. Report.. )
+  * processing steps/policies
+* define their properties 
+* define their relationships
+* define main operations
+
+focus on the application domain
+
+
+
+# DISCUSSION
+* which new "implicit" entities appeared in the model? 
+* what is the main operation? 
+* what are the main steps of this operation? 
+
+
+
+# LAB - Identify an implementation roadmap
+* how can we split the design and implementation in 
+  * phases
+  * sub-tasks
+
+* vertical vs horizontal slicing
+
+
+
+# How to start?
+It's difficult!
+
+The general vision is needed, but we must implement it incrementally
+
+* make it smaller
+
+
+
+# Make it smaller: ask yourself questions
+* what if instead I only do X?
+* A & B -> A then B
+
+* top down vs bottom up
+
+
+
+## Continuous Chain
+* Faster small steps beat bigger steps
+* also easier to parallelize
+
+* The smaller the better
+
+
+
+# LAB
+* what is the "Minimum Viable Implementation"?
+
+* choose a single case to process, from end to the end
+  * End-to-end means Request loading to Report output
+
+* keeping the input data
+* a representative case
+* a simple case
+
+
+
+## A chain of Safe steps
+> A complex system that works evolves from simpler systems that works
+
+* you need to be able to check that everything works
+* review the model frequently
+* run frequently 
+* test frequently
+
+
+
+## Walking Skeleton
+* entire application / workflow structure
+* made of empty (or logging-only) components
+* incrementally filled-in
+* also useful for testing
+
+* also, in-app mocking
+
+
+
+# LAB: outline an implementation plan
+Define the main structure
+Split in sub-tastks with post-its
+Discuss the optimal order
+Introduce mock / support steps
+
+
+
+## Shared Plan - Phase 1
+- Parsing Json -> Minimal (always ok) Validation -> Generate Report
+  - generate empty Report
+  - generate report with the number of expenses header 
+  - generate report with the first expense and allowed amount = amount
+- Validate documentation present of the first expenses
+  - status in expense line
+
+
+
+# Phase 2
+- add warnings at the bottom
+
+- Validate amount limit on single expense 
+- iterate validations on all expenses
+- Compute amount total and allowed amount total (introduce aggregation)
+
+- implement blocking validations ???
+
+- implement monthly overall limit 
+- implement monthly limit per Category 
+
+
+
+# Advanced
+- Implement limit per day (Optional)
+
+- implement daily limit per Category  (Optional)
+
+
+
 # Key forces in Software Design
 
 
@@ -557,63 +751,29 @@ Clean Code, Design Principles and Lean to the rescue
 
 
 
-
-# The Travel Expenses Kata
-
-
-
-# TOPICS 
-The Travel Expenses Kata
-* what is a Kata?
-* overview of the Kata
-* basic requirements
-
-
-
-# What is a Kata? 
-  * _deliberate practice_ -> iterate small skills until >90% perfect
-TODO: 
-
-
-
-# Our Kata
-TODO: Approach
-
-
-
-# Requirements
-Design on paper the macro-structure of an Expense Report Validator Use Case
-  * load a single Request
-  * (in a second phase, also load the Validation Rules)
-  * present a TXT or HTML report showing validation results
-  * allow the user to take a final decision
-
-
-
-## Sample Validation Report
-```
-Employee: Carlo Bonamico
-Month: March
-Year: 2017
-
-Expenses: 12
-
-Date      Category  Requested Amount  Status  Allowed Amount  
-10 March
-          food                  10.5  OK      10.5
-          food                  35.7  PARTIAL 25
-          taxi                  10.2  OK      10.2  
-          TOTAL                 66.4  NODOC   45.7
-
-March     TOTAL                 66.4          45.7
-Warnings
-Blocking Errors
-```
-
-
-
 # LAB
-Model storming
+Implement the first steps paying attention to Cohesion and Coupling
+
+- Parsing Json -> Minimal (always ok) Validation -> Generate Report
+  - generate empty Report
+  - generate report with the number of expenses header 
+  - generate report with the first expense and allowed amount = amount
+
+
+
+# Synchronization point
+You should have at least classes for these concepts: 
+* loading and parsing the Request
+* validator process
+* validation result
+* generating output txt from validation result
+
+
+
+# Works != Done
+If you started with 1-2 classes, take some time to split them
+
+And name them well
 
 
 
@@ -696,6 +856,21 @@ what's better?
 
 
 
+# LAB review the validate() and generate() functions
+Split the methods in elementary responsibilities
+
+
+
+# Synchronization point
+At this point you should have separate methods for 
+- validating a single expense
+- generating the header
+- generating the validated expenses table
+  - generating a single line of the output
+- generating the footer
+
+
+
 ## Primitives, Orchestrators, level of abstraction
 * Primitives: small, focused, typically use-case independent
 * Orchestrators: implement use-cases by combining primitives
@@ -714,13 +889,10 @@ what's better?
 
 
 
-##Lab
-TODO: 
-
-
-
-
-# LAB: Parsing the Expenses Reimbursement Request
+##Lab - add more validations
+- Validate documentation present of the first expenses
+  - status in expense line
+- add warnings at the bottom (Optional)
 
 
 
@@ -770,16 +942,27 @@ Consequences:
 
 
 
-# what if…
+# LAB: Validating the overall monthly total amount
+- Validate amount limit on single expense 
+- iterate validations on all expenses
+
+
+
+# Reviewing your code 
+Look at parts of the code and ask yourself what if that changes?
+
+
+
+# Synchronization point
+At this point you should have separate classes for 
+* validating the amount of a single expense
+* validating the documentation presence
+* iterating on all expenses
 
 
 
 # looks similar vs changes for the same reason
 TODO: link
-
-
-
-# LAB: Validating the overall monthly total amount
 
 
 
@@ -821,63 +1004,12 @@ TODO: link
 
 
 
+# LAB: planning a complex change: adding aggregation
+Compute amount total and allowed amount total (introduce aggregation)
 
-# LAB: Generating the Validation Report
-TODO: 
-
-
-
-# How to start?
-* Separation of Concerns in practice: ask yourself questions!
-* make it smaller
-* top down vs bottom up
-* mock steps vs Walking Skeleton
-
-
-
-# Make it smaller: ask yourself questions
-* what if instead I only do X?
-* A & B -> A then B
-
-
-
-## Continuous Chain
-* Faster small steps beat bigger steps
-* also easier to parallelize
-
-* The smaller the better
-
-
-
-## Safe steps
-* you need to be able to check that everything works
-* review the model frequently
-* run frequently 
-* test frequently
-
-
-
-# Top Down vs Bottom Up
-
-
-## in -app mocking
-* like in the tests
-
-
-
-## Walking Skeleton
-* entire application / workflow structure
-* made of empty (or logging-only) components
-* incrementally filled-in
-* also useful for testing
-
-
-
-# LAB: TODO: planning a complex change
-Define the main structure
-Split in sub-tastks with post-its
-Discuss the optimal order
-Introduce mock / support steps
+* Define the main structure
+* Split in sub-tastks with post-its
+* Discuss the optimal order
 
 
 
@@ -904,11 +1036,7 @@ http://continuousdelivery.com/
 
 
 
-# LAB: Validating Expense limits per category
-TODO: 
-
-
-
+#FIXME: anticipare?
 # TOPICS 
 Reviewing your Design
 * naming
@@ -977,21 +1105,13 @@ Most code is written once, but read
 http://llewellynfalco.blogspot.it/p/infographics.html
 
 
-
 # Model out Loud
-
 
 
 # Examples
 
 
-
 # What if this changes? 
-
-
-
-# LAB: Validating Monthly constraints per category
-TODO: 
 
 
 
@@ -999,7 +1119,6 @@ TODO:
 Collaborating with other classes
 * Prefer Composition to Inheritance
 * Dependency Injection
-
 
 
 
@@ -1035,8 +1154,9 @@ Achieve complex interaction by coordinating simple elements
 
 
 
-## OCP 
->Open for extension, Closed for Modification
+# LAB: Monthly Expense limits 
+- implement monthly overall limit 
+- delegating aggregation to dedicated class
 
 
 
@@ -1056,15 +1176,31 @@ chaos if same approach applied in the large
 
 
 
-##Lab
-* Design the classes for the additional requirements for the expense report
+# LAB: Generalizing the validation process
+* Introduce the Validator interface
+  * inputs
+  * outputs
+* Define a list of individual validators
+* separate the validators from their application to the expenses
+TODO: review
 
 
 
-## Lab TODO: qui o dove? 
+## OCP 
+>Open for extension, Closed for Modification
+
+
+
+# LAB: Validating Monthly constraints per category
+TODO: add other validation 
+
+- Implement limit per day (Optional)
+
+
+
+## Lab: impact analysis 
 * Revise the expenses lab in the light of these concepts
 * Consider the impact of the following additional requirements
-  * allow for grouping expenses by day or category
   * allow the operator to manually modify the allowed reimbursement 
   * enable the ``Approve`` button only if there are no blocking errors
 
@@ -1072,7 +1208,7 @@ chaos if same approach applied in the large
 
 
 # LAB: Validating Expense limits per day
-TODO: 
+- implement daily limit per Category  (Optional)
 
 
 
@@ -1086,7 +1222,14 @@ Generalizing the model
 
 
 # LAB: Making Validation Rules configurable
-TODO: criteri per pianificarlo e implementarlo gradatamente
+Introduce the concept of Validation Rule
+* implement it 
+* istantiate it in code
+
+
+
+# LAB
+* load validation rules from file
 
 
 
