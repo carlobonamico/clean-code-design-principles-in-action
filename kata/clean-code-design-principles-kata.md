@@ -98,11 +98,11 @@ Basically, to all developers! Independently from the language / platform you are
 * huge files
 * deep interconnections between features
 * cross-cutting mechanisms "spread" everywhere
-* fragility
+* fragility and ripple effects
 * risk of change increases
 * productivity decreases over time
 
-We need to better design the software
+**We need to better design the software**
 
 
 
@@ -111,8 +111,30 @@ We need to better design the software
 
 
 # Ideas...
-* defining structure
-* ... 
+Among all the possible working implementations, 
+
+make a "minimum energy" choice
+* that can tolerate some degree of changes ("applied force")
+* choosing what to separate and what to keep together
+
+See Carlo Pescio's work
+http://www.physicsofsoftware.com/
+https://www.youtube.com/watch?v=WPgYju3KnIY
+
+
+
+# So
+* reducing cost of change
+* preventing fragility in the face of changes
+
+
+
+# But also 
+* reducing cost of development
+* making possible to create complex systems
+* keeping collaboration effective as team grows
+
+https://martinfowler.com/bliki/DesignStaminaHypothesis.html
 
 
 
@@ -120,17 +142,22 @@ We need to better design the software
 
 
 
-<img src="images/codemotion/6.png" >
+<img src="../images/components.png" >
 
 
 
 # Ideas
-* reducing cost of development
-* reducing cost of change
-* making possible to create complex systems
-* decoupling unrelated parts
-* preventing fragility in the face of changes
-* keeping collaboration effective as team grows
+Good design 
+* is visible
+* is as simple as possibile
+
+* makes it easy to do the correct things
+* makes it difficult to do the wrong things
+
+* helps understanding
+* helps reuse
+
+* is sustainable
 
 
 
@@ -141,8 +168,6 @@ We need to better design the software
 * Modeling vs Design
 
 
-
-# Why do we need design? 
 
 ## Maybe if we do Agile, we do not need it? 
 
@@ -195,6 +220,7 @@ Think of a building
 * splitting the system in modules
 * identifying compnents and their interfaces in modules
 * implementing low-level details
+
 * repetitive/standard areas vs custom/innovative areas
 
 
@@ -248,6 +274,8 @@ Alberto Brandolini
 
 
 # Complexity
+Software development tasks are increasingly challenging
+
 We need design to make Complexity tractable
 * Essential Complexity
 * Accidental Complexity
@@ -255,7 +283,7 @@ We need design to make Complexity tractable
 
 
 # Essential Complexity
-* inherently present in the business Domain
+* inherently present __in the business Domain__
 
 If you oversimplify Essential Complexity, you get 
 * higher coupling
@@ -264,17 +292,18 @@ If you oversimplify Essential Complexity, you get
 Can be however reduced through 
   * Abstraction
   * Composition
-  * Changing the Context Boundary
+  * Changing the Context Boundaries
 
 
 
 # Accidental Complexity 
-* added during the Analysis, Design, Implementation
+* __added__ during the Analysis, Design, Implementation
 
 Can, and must be removed as much as possible
 
-> Simplicity--the art of maximizing the amount 
-of work not done--is essential.
+> Simplicity --the art of maximizing the amount 
+of work not done-- is essential.
+
 Principles behind the Agile Manifesto
 
 
@@ -282,24 +311,17 @@ Principles behind the Agile Manifesto
 ## Improve our code
 It takes a Deliberate approach and constant effort
 
-    To complicate is easy, to simplify is hard
-    To complicate, just add, everyone is able to complicate
-    Few are able to simplify
-    Bruno Munari
+>    To complicate is easy, to simplify is hard
+>    To complicate, just add, everyone is able to complicate
+>    Few are able to simplify
+
+Bruno Munari
 
 
 
 # Complexity vs Design vs understanding
 * Encapsulation, Cohesion, Decoupling, Abstraction are important because...
 they let us __think__ about a single aspect at a time
-
-
-
-# Cost of Change
-* over time
-* with respect to the number of features
-  * exponential increase 
-
 
 
 
@@ -320,15 +342,19 @@ Key ideas:
 * focus on the Application Domain
 * strong Domain Expert / Developer collaboration
 * (Multiple) Consistent Models
+  * Bounded Contexts
 
 
 
 # Ubiquitous Language
 * agree on a single definition / word per concept
-* always use it in
+  * split concepts whenever it is needed
+
+* always and consistently use it in
   * code
   * documents
   * tests
+  * talk
 
 
 
@@ -339,11 +365,15 @@ Key ideas:
 
 
 
-# Model-Driven (or Model-Centered) Design
+# Model-Driven Design
+We think __Model-Centered__ is better
+
 > All models are wrong. Some are useful
 
-* Model <--> Code
+* ```Model <--> Code```
 * the code should reflect the model as much as possible
+
+* very strong consistency __within a Context__
 
 
 
@@ -362,7 +392,7 @@ Key ideas:
 
 
 
-# Event Storming
+# Event Storming ideas
 * Focus on Domain Events
  * things that happen 
 
@@ -387,7 +417,11 @@ The Travel Expenses Kata
 * Learn by repeating a known track
 * but __trying to make it better__ every time
 
-  * _deliberate practice_ -> iterate small skills until >90% perfect
+_Deliberate Practice_ means 
+  * iterate small skills until >90% perfect
+  * focus on improving a specific aspect at a time
+
+https://jamesclear.com/deliberate-practice-theory
 
 
 
@@ -437,13 +471,13 @@ Blocking Errors
 
 
 # Approach
-* Do everything incrementally
+* Do everything __incrementally__
 * start from the basics
 
 
 
 # LAB 1- Model storming
-* define on paper the main Domain Components
+* define on paper the main Domain Elements
   * input data (e.g. Request... )
   * output data (e.g. Report.. )
   * processing steps/policies
@@ -458,7 +492,7 @@ pay attention to the __Ubiquitous Language__
 
 
 # DISCUSSION
-* which new "implicit" entities appeared in the model? 
+* which new _"implicit"_ entities appeared in the model? 
 * what is the main operation? 
 * what are the main steps of this operation? 
 
@@ -483,7 +517,7 @@ The general vision is needed, but we must implement it incrementally
 
 
 # Make it smaller: ask yourself questions
-* what if instead I only do X?
+* what if instead of X Y Z we only do X?
 * A & B -> A then B
 
 * top down vs bottom up
@@ -493,7 +527,8 @@ http://agileforall.com/resources/how-to-split-a-user-story/
 
 
 ## Continuous Chain
-* Faster small steps beat bigger steps
+* Faster small steps beat slower bigger steps
+  * concept of __One Piece Flow__ in Lean
 * also easier to parallelize
 
 * The smaller the better
@@ -506,13 +541,17 @@ http://agileforall.com/resources/how-to-split-a-user-story/
   * End-to-end means Request loading to Report output
 
 * keeping the input data
-* a representative case
 * a simple case
+* a __representative__ case
 
 
 
 ## A chain of Safe steps
 > A complex system that works evolves from simpler systems that works
+
+John Gall
+
+https://signalvnoise.com/posts/1414-a-complex-system-that-works-is-invariably
 
 * you need to be able to check that everything works
 * review the model frequently
@@ -524,26 +563,26 @@ http://agileforall.com/resources/how-to-split-a-user-story/
 ## Walking Skeleton
 * entire application / workflow structure
 * made of empty (or logging-only) components
-* incrementally filled-in
+* incrementally filled-in / fleshed out
 * also useful for testing
 
-* also, in-app mocking
+* _in-app mocking_
+
 
 
 ## How to keep track of what you do and what's missing
 * Write it down
 * comment it with temporary comments
 * code it!
-
-
+  * write the API you ideally would like to have
 
 
 
 # LAB 4 - outline an implementation plan
-Define the main structure
-Split in sub-tastks with post-its
-Discuss the optimal order
-Introduce mock / support steps
+* Define the main structure
+* Split in sub-tastks with post-its
+* Discuss the optimal order
+* Introduce mock / support steps
 
 
 
@@ -588,13 +627,9 @@ http://continuousdelivery.com/
 
 
 
-##More practice and Katas
+## More Design practice and Katas
 * Elefant Carpaccio
   * https://docs.google.com/document/u/1/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub
-
-
-
-
 
 
 
@@ -612,10 +647,11 @@ Key forces in Software Design
 
 
 ## Design Principles
-Basically, Common Sense applied to software design
+Basically, Common Sense applied to Software Design
 
 >Treat your code like your kitchen
-> C.B., about 2013
+
+C.B., about 2013
 
 easy in the real world...
 
@@ -633,6 +669,8 @@ need to stay together (or at least nearby)
 
 Think __forks and knives__
 
+Impacts cost of changing one element
+
 
 
 # Coupling
@@ -646,11 +684,23 @@ need to stay separate
 
 Think __forks and milk__, or __bread and socks__
 
+Impacts propagation of changes from one element to the others
+
 
 
 # Encapsulation 
-* Objects have a clear "Outside" and "Inside"
-* Minimize the impact of change
+* Objects have a clear __Outside__ and __Inside__
+* helps minimizing the impact of change
+* helps reducing coupling
+
+
+
+# Idea
+Make code easy to __delete__
+
+* https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to
+
+* https://18f.gsa.gov/2016/06/24/5-lessons-in-object-oriented-design-from-sandi-metz/
 
 
 
@@ -689,12 +739,13 @@ How does our code become unmanageable? A practical example
 * reading code vs writing code
 * understanding effort
 * fragility due to interdependence
+
 * Symptoms of Rotten Design
   * http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf
 
 
 
-##What can we do about that? 
+## What can we do about that? 
 Clean Code, Design Principles and Lean to the rescue
 - improving our code
 - improving our design
@@ -723,14 +774,14 @@ You should have at least classes for these concepts:
 
 
 # Works != Done
-If you started with 1-2 classes, take some time to split them
+If you identified initially 1-2 classes, take some time to split them
 
 And name them well
 
 
 
 ## Do you know this man? 
-Google Ignaz Semmelweis
+Google "Ignaz Semmelweis"
 
 
 
@@ -741,7 +792,7 @@ Google Ignaz Semmelweis
 
 * He championed washing hands before childbirth and surgery
 
-   
+
 
 ## Clean Code and Basic Design Principles
 * cannot solve all development problems...
@@ -782,6 +833,8 @@ Single Responsibility Principle for methods
 
 Or even better, have a single responsibility
 * and reason to change
+
+As with all Design Principles, this is more of a __compass direction__ than an absolute rule
 
 
 
@@ -860,13 +913,14 @@ At this point you should have at least separate methods for
   * easier to understand
 
 
+
 # Steps vs Flow
 * Another example: have methods for each step of an algorithm
 * another method to decide the flow among them
 
 
 
-##Lab 7 - add more validations
+## Lab 7 - add more validations
 - Validate documentation present of the first expenses
   - status in expense line
 - add warnings at the bottom (Optional)
@@ -886,7 +940,7 @@ What is a Responsibility
 
 
 
-##Single Responsibility Principle
+## Single Responsibility Principle
 Have you ever seen your grandmother put dirty clothes in the fridge?
 
 Or biscuits in the vegetable box?
@@ -895,8 +949,8 @@ So, why to we do this all the time in our code?
 
 
 
-##Single Responsibility Principle
-Responsibility == reason to change
+## Single Responsibility Principle
+Responsibility == __reason to change__
 
 
 
@@ -911,7 +965,7 @@ Consequences:
 
 
 
-##LAB 8 - color the responsibilities
+# LAB 8 - color the responsibilities
 * Take the biggest class written up to now or any other code example
 * Paste it in word / Google Docs
 * Outline in different colors the various responsibilities
@@ -942,6 +996,9 @@ At this point you should have separate classes for
 # looks similar vs changes for the same reason
 https://web.archive.org/web/20090411030053/http://threeriversinstitute.org/blog?p=104
 
+Sandy Metz
+https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction
+
 
 
 # Single Responsibility means splitting ...
@@ -959,7 +1016,8 @@ https://web.archive.org/web/20090411030053/http://threeriversinstitute.org/blog?
 
 # Layered Architecture
 * each layer depends only on lower layers
-* ideally, with the domain layer at the bottom (Hexagonal architecture)
+* ideally, with the domain layer at the bottom 
+  * _Hexagonal Architecture_
 
 
 
@@ -982,7 +1040,7 @@ Reviewing your Design
 
 
 
-##reading code vs writing code
+## reading code vs writing code
 >What is written without effort is in general read without pleasure.
 >
 >Samuel Johnson
@@ -998,11 +1056,7 @@ Most code is written once, but read
 ## What is a good name
 <img src="images/naming.png">
 
- * nonsense
- * honest
- * honest & complete
- * does the right thing
- * intent
+ * nonsense / honest / honest & complete / does the right thing / intent
  * domain abstraction
 
 http://llewellynfalco.blogspot.it/p/infographics.html
@@ -1022,11 +1076,6 @@ Collaborating with other classes
 
 
 
-# Dependency Inversion Principle
-TODO: 
-
-
-
 ## Collaborating classes
 * We need a way of making collaboration easier
 
@@ -1034,9 +1083,13 @@ TODO:
   * separate creation of classes from linking instances
   * create A
   * create B
-  * something else passes B to A
+  * something else passes or __injects__ B into A
 
-* You do not need a framework for that...
+
+
+# Dependency Injection
+Goal: using capabilities from another object should be almost as easy as calling a method in your object
+* You do not (necessarily) need a framework for that...
 
 
 
@@ -1054,7 +1107,7 @@ TODO:
 * combine parts 
 * a derived class becomes the composition of a base behaviour + additional custom behaviour
 
-Achieve complex interaction by coordinating simple elements
+Achieve complex structures, behaviours, interactions  by __composing__ and __coordinating__ simple elements
 
 
 
@@ -1063,25 +1116,31 @@ Compute amount total and allowed amount total (introduce aggregation)
 - implement monthly overall limit 
 - delegating aggregation to dedicated class
 
+Validate aggregate properties = Aggregate + Validate result 
+
 * Define the main structure
-* Split in sub-tastks with post-its
+* Split in incremental sub-tastks 
 * Discuss the optimal order
 
 
 
 ## Interfaces and Contracts
-* esplicit vs implicit
+* explicit vs implicit
 * Decoupling changes and detecting regressions
-* separate clean parts from dirty code
+* separate 
+  * clean parts from dirty code
+  * Intent from Implementation
 
 
 
 # Types of interaction
-* what is effective in the small (everyone talking at the same time in a romm to solve a problem)
-* interaction within local variables
+* what is effective in the small 
+  * e.g. everyone talking at the same time in a room to solve a problem
+  * interaction within local variables
 
 chaos if same approach applied in the large
 * anyone talking to anyone
+* global interactions
 
 
 
@@ -1181,7 +1240,7 @@ Things that make code well-designed, easy to evolve
 
 
 
-##The principles
+## The principles
 So what did we just do? Understand the principles
 - the relationship between quality and productivity
 - the need for a continuous chain of small, safe steps of design &
@@ -1189,7 +1248,7 @@ implementation
 
 
 
-##Quality vs Productivity 
+## Quality vs Productivity 
 Traditionally, Quality is seen as an alternative to raw development Speed
 * this is partly true only in the short term
 
@@ -1214,10 +1273,13 @@ Four quadrants:
 ## Improve our code
 It takes a Deliberate approach and constant effort
 
-    If I don't practice for a day, I notice
-    If I don't practice for two days, my orchestra notices
-    If I don't practice for three days, the public notice
-    Claudio Abbado
+>    If I don't practice for a day, I notice
+
+>    If I don't practice for two days, my orchestra notices
+
+>    If I don't practice for three days, the public notice
+
+Claudio Abbado
 
 - practice, practice, practice and continuous / daily improvement (Kaizen)
 
@@ -1236,7 +1298,7 @@ See Robert C. Martin
 
 
 
-##More practice and Katas
+## More practice and Katas
 * http://matteo.vaccari.name/blog/tdd-resources
 * https://github.com/xpmatteo/simple-design-in-action/tree/master/stage-01-hello-world/script
 * http://codekata.com/

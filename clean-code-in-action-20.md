@@ -1,4 +1,4 @@
-#To learn more
+# To learn more
 * Online tutorials and video trainings:
   * https://cleancoders.com
 
@@ -7,7 +7,7 @@
 
 
 
-##How to continue by yourself: references for further learning
+## How to continue by yourself: references for further learning
 - Principles of Package Design
   * http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf
   
@@ -22,7 +22,7 @@
 
 
 
-##Javascript
+## Javascript
 * http://humanjavascript.com/
 * http://javascript.crockford.com/ 
 * http://yuiblog.com/crockford/
@@ -32,7 +32,7 @@
 
 
 
-#Thank you
+# Thank you
 * Other trainings
   * https://github.com/carlobonamico/
 
