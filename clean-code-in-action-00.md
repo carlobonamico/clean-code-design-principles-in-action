@@ -1,4 +1,4 @@
-##While you are waiting...
+## While you are waiting...
 
 * download the labs from
   * https://github.com/carlobonamico/clean-code-design-principles-in-action
@@ -23,7 +23,7 @@ applications in less time.
 
 
 
-#ABSTRACT
+# ABSTRACT
 We are often asked for more features, more bugfixes, faster. But is
 "running" always the fastest way to get things done?
 For a mountain climber, "running" means more mistakes, falling off
@@ -39,7 +39,7 @@ complete more solid & maintainable applications in less time
 
 
 
-##AUDIENCE
+## AUDIENCE
 Basically, to all developers! Independently from the language /
 platform you are developing on, and from your expertise level, if you
 are interested in improving your approach to coding, and develop
@@ -48,7 +48,7 @@ for you.
 
 
 
-##PREREQUISITES
+## PREREQUISITES
 Working knowledge and practical experience in one programming language
 (you should be able to write/compile/test/debug by yourself a program
 which reads and parses input and presents output either on the command
@@ -57,7 +57,7 @@ Basic knowledge of HTTP.
 
 
 
-##HARDWARE AND SOFTWARE REQUIREMENTS
+## HARDWARE AND SOFTWARE REQUIREMENTS
 * Participants are required to bring their own laptop. The labs require an HTML5 Browser (Chrome or Firefox), text editor or IDE, supporting HTML5, CSS3, JavaScript.
 
 * Modern Browser (Chrome - Firefox)
@@ -75,7 +75,7 @@ and/or IDE (Eclipse,  NetBeans, Intellij, Visual Studio,.. )
 
 
 
-#TOPICS
+# TOPICS
 * How does our code become unmanageable? A practical example
 * What can we do about that? 
   * Clean Code, Design Principles and Lean to the rescue
@@ -87,7 +87,7 @@ and/or IDE (Eclipse,  NetBeans, Intellij, Visual Studio,.. )
 
 
 
-#Topics
+# Topics
   * Concept 5 - Making our code Testable
   * Concept 6 - Making debug and troubleshooting easier
   * Concept 7 - Refactoring
@@ -98,14 +98,14 @@ and/or IDE (Eclipse,  NetBeans, Intellij, Visual Studio,.. )
 
 
 
-##Approach
+## Approach
 For each module, hands-on lab will include
 - quizzes (which of these variants is better? trade-offs)
 - interactive examples to complete and modify in an online IDE
 
 
 
-##Key references
+## Key references
 * All Labs and links available at
   * https://github.com/carlobonamico/clean-code-design-principles-in-action
   
@@ -116,7 +116,7 @@ For each module, hands-on lab will include
 
 
 
-##Revising core Javascript concepts
+## Revising core Javascript concepts
 * Yakov Fain - Advanced Introduction to Javascript
   * https://www.youtube.com/watch?v=X1J0oMayvC0
   * http://enterprisewebbook.com/appendix_a_advancedjs.html

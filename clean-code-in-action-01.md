@@ -1,4 +1,4 @@
-#TOPICS
+# TOPICS
 How does our code become unmanageable? A practical example
 - fast-forward demo through the life of an (apparently) trivial function
 
@@ -116,7 +116,7 @@ Which become months with regression testing
 
 
 
-##why this happens? 
+## why this happens? 
 the "deadly sins" of development 
 * cut & paste,
 * optimization lust
@@ -129,26 +129,26 @@ the "deadly sins" of development
 
 
 
-#Lab 01
+# Lab 01
 Lab
 
 * write down 3 problems with the expense report code
 
 
 
-#Exercises 
+# Exercises 
 * try to keep track of how much time you waste because of bad code
   * just tick a mark every time it happens
 
 
 
-#Learn more
+# Learn more
 * Symptoms of Rotten Design
   * http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf
 
 
 
-##What can we do about that? 
+## What can we do about that? 
 Clean Code, Design Principles and Lean to the rescue
 - improving our code
 - improving our design
@@ -224,16 +224,16 @@ It takes a Deliberate approach and constant effort
 
 
 
-##Practice and Katas
+## Practice and Katas
 Code Katas
 
 
 
-##Clean Code by example: key concepts
+## Clean Code by example: key concepts
 
 
 
-##Concept 1 - Naming
+## Concept 1 - Naming
 - reading code vs writing code
 - what is a good name?
 - same but different: the importance of conventions
@@ -242,7 +242,7 @@ Code Katas
 
 
 
-##Code ?!#%
+## Code ?!#%
 ## Why does this matter? 
 A little experiment
 
@@ -261,7 +261,7 @@ Group B: go to http://plnkr.co/edit/zPXf70?
 
 
 
-##reading code vs writing code
+## reading code vs writing code
 >What is written without effort is in general read without pleasure.
 >
 >Samuel Johnson
@@ -274,7 +274,7 @@ Most code is written once, but read
 
 
 
-##what is a good name?
+## what is a good name?
 * Ideas?
 
 
@@ -298,7 +298,7 @@ http://llewellynfalco.blogspot.it/p/infographics.html
 
 
 
-##same but different: the importance of conventions
+## same but different: the importance of conventions
 How do you read this code: 
 
 ```
@@ -318,7 +318,7 @@ float farenheitTemperature;
 
 
 
-##Lab
+## Lab
 Lab 1: write down a function for computing the amount of days between two dates
 * jot it down
 * check that it works
@@ -358,7 +358,7 @@ Lab 2: refactor the first example
 
 
 
-##aside: commit messages
+## aside: commit messages
 Everything is like code
 * configuration files
 * infrastructure
@@ -370,26 +370,26 @@ And
 
 
 
-#Learn more
-* https://en.wikipedia.org/wiki/Leap_year#Algorithm
+# Learn more
+* https://en.wikipedia.org/wiki/Leap_year# Algorithm
 * http://blog.speziale.it/post/Scorporo-dei-prezzi-ivati-problema-del-e2809ccentesimo-pazzoe2809d.aspx
 
 
 
-##Concept 2 - Formatting
+## Concept 2 - Formatting
 - making code readable
 - making code diff-friendly & commit-friendly
 - making code modification-friendly
 
 
 
-##Code ?!#%
+## Code ?!#%
 What does this code do?
 http://plnkr.co/edit/mZtyDG?p=info
 
 
 
-##Making code readable
+## Making code readable
 * the IDE does most of that for you
 * share a team guideline
   * possibly, a shared style template 
@@ -402,7 +402,7 @@ http://plnkr.co/edit/mZtyDG?p=info
 
 
 
-##Html example
+## Html example
 
 ```html
    <div>Threshold <input type="number" style="color : red" min ="5"
@@ -429,14 +429,14 @@ vs
 
 
 
-##Lab
+## Lab
 Refactor this
 
 * http://plnkr.co/edit/91t0kv?p=preview
 
 
 
-##Concept 3 - What's in a good function?
+## Concept 3 - What's in a good function?
 - single responsibility
 - separing inputs from outputs
 - if you have to do 3 things, make 4 functions
@@ -444,7 +444,7 @@ Refactor this
 
 
 
-##Code ?!#%
+## Code ?!#%
 See the ``gen()`` function again
 
 
@@ -522,12 +522,12 @@ what's better?
 
 
 
-##Lab
+## Lab
 * Parse the Meteo Data file and compute the weekly min and max temperature
 
 
 
-##Concept 4 - What's in a good class? Design Principles
+## Concept 4 - What's in a good class? Design Principles
 - Single Responsibility Principle
 - collaborating with other classes
 - composition vs inheritance (and the Open/Closed principle)
@@ -536,7 +536,7 @@ what's better?
 
 
 
-##Single Responsibility Principle
+## Single Responsibility Principle
 Have you ever seen your grandmother put dirty clothes in the fridge?
 
 Or biscuits in the vegetable box?
@@ -545,7 +545,7 @@ So, why to we do this all the time in our code?
 
 
 
-##Single Responsibility Principle
+## Single Responsibility Principle
 Responsibility == reason to change
 
 
@@ -561,7 +561,7 @@ Consequences:
 
 
 
-##LAB
+## LAB
 * Take the "ugly" code or any other code example
 * Paste it in word / Google Docs
 * Outline in different colors the various responsibilities
@@ -605,7 +605,7 @@ Consequences:
 
 
 
-##Lab
+## Lab
 * Design the classes for the additional requirements for the expense report
 
 * Can you simply automatically do this for all employees?
@@ -615,12 +615,12 @@ Consequences:
 
 
 
-##Concept 5 - Making our code Testable
+## Concept 5 - Making our code Testable
 - avoid statics
 - testable code vs good design
 
 
-##Code ?!#%
+## Code ?!#%
 
 
 
@@ -645,24 +645,24 @@ Things that make code well-designed, easy to evolve
 
 
 
-##More practice and Katas
+## More practice and Katas
 * http://matteo.vaccari.name/blog/tdd-resources
 
 
 
-#Learn more
+# Learn more
 * http://misko.hevery.com/code-reviewers-guide/
 
 
 
-##Concept 6 - Making debug and troubleshooting easier
+## Concept 6 - Making debug and troubleshooting easier
 - one task - one statement
 - make return values visible
 - logging
 
 
 
-##Code ?!#%
+## Code ?!#%
 ```java
 			BufferedReader reader = new BufferedReader(new FileReader(fileName));
 			
@@ -683,7 +683,7 @@ It contains a mistake - go debug it!
 
 
 
-##One task - one statement
+## One task - one statement
 The ``forecast.add(...`` line both
 * has multiple responsibilities
 * manipulates multiple values
@@ -708,14 +708,14 @@ Also modern debuggers are able to display the value inline
 
 
 
-##Logging
+## Logging
 * make log messages understandable 
   * avoid mental mapping
 * make them easy to search
 
 
 
-##Lab
+## Lab
 Refactor the example
 
 
@@ -726,7 +726,7 @@ Your code should read like a terse prose of _simple_ statements
 
 
 
-##Concept 7 - Refactoring
+## Concept 7 - Refactoring
 - from bad code to good code
 - in steps
 - learn your IDE refactoring tools
@@ -734,7 +734,7 @@ Your code should read like a terse prose of _simple_ statements
 - Why we need unit tests?
 
 
-##Code ?!#%
+## Code ?!#%
 * Go back to the "ugly" example
 
 
@@ -782,7 +782,7 @@ The power of compounding many small changes _in the same direction_
 
 
 
-##Lab
+## Lab
 * Refactor the initial Expense Report example
 
 * name things
@@ -792,7 +792,7 @@ The power of compounding many small changes _in the same direction_
 
 
 
-##The principles
+## The principles
 So what did we just do? Understand the principles
 - the relationship between quality and productivity
 - the need for a continuous chain of small, safe steps of design &
@@ -800,7 +800,7 @@ implementation
 
 
 
-##Quality vs Productivity 
+## Quality vs Productivity 
 Traditionally, Quality is seen as an alternative to raw development Speed
 * this is partly true only in the short term
 
@@ -837,7 +837,7 @@ Four quadrants:
 
 
 
-##Lab
+## Lab
 Define the main structure
 Split in sub-tastks with post-its
 Discuss the optimal order
@@ -845,13 +845,13 @@ Introduce mock / support steps
 
 
 
-##More practice and Katas
+## More practice and Katas
 * Elefant Carpaccio
   * https://docs.google.com/document/u/1/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub
 
 
 
-##Incremental development and evolutionary design
+## Incremental development and evolutionary design
 - how to do everything incrementally
 - Separation of Concerns in practice: ask yourself questions!
 - incremental implementation: in-application Mocks & the Walking
@@ -908,7 +908,7 @@ http://continuousdelivery.com/
 
 
 
-##Lab
+## Lab
 Define the main structure
 Split in sub-tastks with post-its
 Discuss the optimal order
@@ -916,7 +916,7 @@ Introduce mock / support steps
 
 
 
-##A more complex example - applying the method to real-world problems
+## A more complex example - applying the method to real-world problems
 - the feedback loop
 - splitting the problem
 - getting more feedback
@@ -926,7 +926,7 @@ Introduce mock / support steps
 
 
 
-##Code ?!#%
+## Code ?!#%
 When it does not work...
 
 And we do not know why...
@@ -986,7 +986,7 @@ Or at least do it fast
 
 
 
-##More practice and Katas
+## More practice and Katas
 * http://codekata.com/
 
 * https://www.industriallogic.com/blog/modern-agile/
